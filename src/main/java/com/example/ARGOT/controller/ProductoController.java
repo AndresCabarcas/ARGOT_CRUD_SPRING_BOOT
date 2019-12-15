@@ -39,9 +39,9 @@ public class ProductoController {
     int total = 0;
     int cantventa = 0;
     int dato2 = -1;
-    int cantTotal=0;
-    int resta=0;
-    
+    int cantTotal = 0;
+    int resta = 0;
+
     public static String getFechaActual() {
         Date ahora = new Date();
         SimpleDateFormat formateador = new SimpleDateFormat("dd-MM-yyyy");
@@ -54,6 +54,11 @@ public class ProductoController {
     public String index(Model model) {
         model.addAttribute("CantProd", productoServiceAPI.getAll().size());
         return "index";
+    }
+
+    @RequestMapping(value = "/login")
+    public String login() {
+        return "login";
     }
 
     @RequestMapping("/facturar")
@@ -84,8 +89,8 @@ public class ProductoController {
             Producto prod = new Producto();
             prod.setId(produc.getId());
             prod.setNombre(produc.getNombre());
-            resta= Integer.parseInt(produc.getVendidos());
-            cantTotal=Integer.parseInt(produc.getCantidad())-resta;
+            resta = Integer.parseInt(produc.getVendidos());
+            cantTotal = Integer.parseInt(produc.getCantidad()) - resta;
             prod.setCantidad(String.valueOf(cantTotal));
             prod.setPrecio(produc.getPrecio());
             productoServiceAPI.save(prod);
@@ -97,7 +102,7 @@ public class ProductoController {
         } else {
             model.addAttribute("Mensaje", dato2);
         }
-     dato2 = -1;
+        dato2 = -1;
         return "inventario.html";
     }
 
