@@ -1,0 +1,13 @@
+com\example\ARGOT\service\api\PedidoServiceAPI.class
+com\example\ARGOT\dao\api\PedidoDaoAPI.class
+com\example\ARGOT\service\impl\ProductoServiceImpl.class
+com\example\ARGOT\dao\api\ProductoDaoAPI.class
+com\example\ARGOT\service\impl\PedidoServiceImpl.class
+com\example\ARGOT\service\api\ProductoServiceAPI.class
+com\example\ARGOT\ArgotApplication.class
+com\example\ARGOT\modelos\Pedido.class
+com\example\ARGOT\commons\GenericServiceimpl.class
+com\example\ARGOT\modelos\Producto.class
+com\example\ARGOT\controller\ProductoController.class
+com\example\ARGOT\controller\SecurityConfig.class
+com\example\ARGOT\commons\GenericServiceAPI.class
